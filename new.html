@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .coverage-calculator {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .coverage-calculator h3 {
+        color: #2b3b63;
+      }
+      .coverage-calculator form {
+        display: flex;
+        flex-direction: column;
+      }
+      .coverage-calculator label {
+        margin-top: 10px;
+      }
+      .coverage-calculator input, .coverage-calculator select {
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+      }
+      .coverage-calculator button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e75f3e;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .coverage-calculator button:hover {
+        background-color: #2b3b63;
+      }
+</style>
+<body>
+  <div class="content-section">
+    <!-- <h2>Coverage Calculator</h2> -->
+    <div class="coverage-calculator">
+      <h3>Estimate Your Car Insurance Premium</h3>
+      <form method="GET" action="calculate-premium.html">
+        <label for="car-make">Car Make:</label>
+        <input type="text" id="car-make" name="car-make" required>
+  
+        <label for="car-model">Car Model:</label>
+        <input type="text" id="car-model" name="car-model" required>
+  
+        <label for="car-year">Manufacturing Year:</label>
+        <input type="number" id="car-year" name="car-year" min="1900" max="2023" required>
+  
+        <label for="coverage-type">Coverage Type:</label>
+        <select id="coverage-type" name="coverage-type" required>
+          <option value="comprehensive">Comprehensive</option>
+          <option value="third-party">Third-Party Liability</option>
+        </select>
+  
+        <label for="add-ons">Add-ons:</label>
+        <select id="add-ons" name="add-ons" multiple>
+          <option value="zero-dep">Zero Depreciation</option>
+          <option value="roadside">Roadside Assistance</option>
+          <option value="ncb-protect">NCB Protection</option>
+          <option value="engine-protect">Engine Protection</option>
+        </select>
+  
+        <button type="submit">Calculate Premium</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
