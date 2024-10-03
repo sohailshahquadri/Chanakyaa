@@ -640,7 +640,7 @@ ul {
 .main-menu__logo {
   float: left;
   display: block;
-  padding: 11.2px 0px;
+  /* padding: 11.2px 0px; */
   margin-inline-start: -120px;
 }
 
